@@ -7,13 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77203FC1E6E986CC037543D9 /* Pods_GKViper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAFDB353F79F9D1057655DF1 /* Pods_GKViper.framework */; };
 		ED29AE482211B7040035C17A /* GKViper.h in Headers */ = {isa = PBXBuildFile; fileRef = ED29AE462211B7040035C17A /* GKViper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED29AE552211B76B0035C17A /* ViperRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED29AE502211B7690035C17A /* ViperRouter.swift */; };
+		ED29AE562211B76B0035C17A /* ViperInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED29AE512211B76A0035C17A /* ViperInteractor.swift */; };
+		ED29AE572211B76B0035C17A /* ViperPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED29AE522211B76A0035C17A /* ViperPresenter.swift */; };
+		ED29AE582211B76B0035C17A /* ViperViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED29AE532211B76A0035C17A /* ViperViewModel.swift */; };
+		ED29AE592211B76B0035C17A /* ViperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED29AE542211B76A0035C17A /* ViperViewController.swift */; };
+		ED29AE5C2211B77F0035C17A /* OriginTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED29AE5A2211B77F0035C17A /* OriginTableViewCell.swift */; };
+		ED29AE5D2211B77F0035C17A /* OriginCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED29AE5B2211B77F0035C17A /* OriginCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E1877ED88F0ED565CEE5CD8 /* Pods-GKViper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GKViper.release.xcconfig"; path = "Pods/Target Support Files/Pods-GKViper/Pods-GKViper.release.xcconfig"; sourceTree = "<group>"; };
+		CAFDB353F79F9D1057655DF1 /* Pods_GKViper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GKViper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3252C069712DA4F1F00CC95 /* Pods-GKViper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GKViper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GKViper/Pods-GKViper.debug.xcconfig"; sourceTree = "<group>"; };
 		ED29AE432211B7040035C17A /* GKViper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GKViper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED29AE462211B7040035C17A /* GKViper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GKViper.h; sourceTree = "<group>"; };
 		ED29AE472211B7040035C17A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED29AE502211B7690035C17A /* ViperRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperRouter.swift; sourceTree = "<group>"; };
+		ED29AE512211B76A0035C17A /* ViperInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperInteractor.swift; sourceTree = "<group>"; };
+		ED29AE522211B76A0035C17A /* ViperPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperPresenter.swift; sourceTree = "<group>"; };
+		ED29AE532211B76A0035C17A /* ViperViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperViewModel.swift; sourceTree = "<group>"; };
+		ED29AE542211B76A0035C17A /* ViperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperViewController.swift; sourceTree = "<group>"; };
+		ED29AE5A2211B77F0035C17A /* OriginTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OriginTableViewCell.swift; sourceTree = "<group>"; };
+		ED29AE5B2211B77F0035C17A /* OriginCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OriginCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77203FC1E6E986CC037543D9 /* Pods_GKViper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		72DA616EE88319A5CE314F8D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CAFDB353F79F9D1057655DF1 /* Pods_GKViper.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B8A72434C1967AF65E84C2E0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E3252C069712DA4F1F00CC95 /* Pods-GKViper.debug.xcconfig */,
+				8E1877ED88F0ED565CEE5CD8 /* Pods-GKViper.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		ED29AE392211B7040035C17A = {
 			isa = PBXGroup;
 			children = (
 				ED29AE452211B7040035C17A /* GKViper */,
 				ED29AE442211B7040035C17A /* Products */,
+				B8A72434C1967AF65E84C2E0 /* Pods */,
+				72DA616EE88319A5CE314F8D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -48,8 +86,23 @@
 			children = (
 				ED29AE462211B7040035C17A /* GKViper.h */,
 				ED29AE472211B7040035C17A /* Info.plist */,
+				ED29AE4E2211B7260035C17A /* SourceData */,
 			);
 			path = GKViper;
+			sourceTree = "<group>";
+		};
+		ED29AE4E2211B7260035C17A /* SourceData */ = {
+			isa = PBXGroup;
+			children = (
+				ED29AE5B2211B77F0035C17A /* OriginCollectionViewCell.swift */,
+				ED29AE5A2211B77F0035C17A /* OriginTableViewCell.swift */,
+				ED29AE512211B76A0035C17A /* ViperInteractor.swift */,
+				ED29AE522211B76A0035C17A /* ViperPresenter.swift */,
+				ED29AE502211B7690035C17A /* ViperRouter.swift */,
+				ED29AE542211B76A0035C17A /* ViperViewController.swift */,
+				ED29AE532211B76A0035C17A /* ViperViewModel.swift */,
+			);
+			path = SourceData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -70,10 +123,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED29AE4B2211B7040035C17A /* Build configuration list for PBXNativeTarget "GKViper" */;
 			buildPhases = (
+				53BA6CE697495DA300AB11FD /* [CP] Check Pods Manifest.lock */,
 				ED29AE3E2211B7040035C17A /* Headers */,
 				ED29AE3F2211B7040035C17A /* Sources */,
 				ED29AE402211B7040035C17A /* Frameworks */,
 				ED29AE412211B7040035C17A /* Resources */,
+				ED29AE4F2211B74C0035C17A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -95,6 +150,7 @@
 				TargetAttributes = {
 					ED29AE422211B7040035C17A = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -125,11 +181,52 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		53BA6CE697495DA300AB11FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GKViper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED29AE4F2211B74C0035C17A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ED29AE3F2211B7040035C17A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED29AE552211B76B0035C17A /* ViperRouter.swift in Sources */,
+				ED29AE5D2211B77F0035C17A /* OriginCollectionViewCell.swift in Sources */,
+				ED29AE5C2211B77F0035C17A /* OriginTableViewCell.swift in Sources */,
+				ED29AE582211B76B0035C17A /* ViperViewModel.swift in Sources */,
+				ED29AE592211B76B0035C17A /* ViperViewController.swift in Sources */,
+				ED29AE562211B76B0035C17A /* ViperInteractor.swift in Sources */,
+				ED29AE572211B76B0035C17A /* ViperPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +357,9 @@
 		};
 		ED29AE4C2211B7040035C17A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3252C069712DA4F1F00CC95 /* Pods-GKViper.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -275,9 +374,10 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = AppCraft.GKViper;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gkviper.lib;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -285,7 +385,9 @@
 		};
 		ED29AE4D2211B7040035C17A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E1877ED88F0ED565CEE5CD8 /* Pods-GKViper.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -300,7 +402,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = AppCraft.GKViper;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gkviper.lib;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
