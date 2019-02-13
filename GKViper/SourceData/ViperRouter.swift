@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import GKExtensions
 
-public protocol ViperRouterInputProtocol: AnyObject {
+public protocol ViperRouterInput: AnyObject {
     var _mainController: UIViewController? { get set }
     
     func dismiss(animated: Bool)
@@ -17,7 +17,7 @@ public protocol ViperRouterInputProtocol: AnyObject {
     func goToRoot(animated: Bool)
 }
 
-open class ViperRouter: ViperRouterInputProtocol {
+open class ViperRouter: ViperRouterInput {
     
     // MARK: - Props
     public var _mainController: UIViewController?

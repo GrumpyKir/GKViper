@@ -10,24 +10,24 @@ import UIKit
 import GKNetwork
 import GKExtensions
 
-public protocol ViperInteractorInputProtocol: AnyObject {
-    var _output: ViperInteractorOutputProtocol? { get set }
+public protocol ViperInteractorInput: AnyObject {
+    var _output: ViperInteractorOutput? { get set }
     
     func configure(with data: Any?)
 }
 
-public protocol ViperInteractorOutputProtocol: AnyObject {
+public protocol ViperInteractorOutput: AnyObject {
     func beginLoading()
     func finishLoading(with error: Error?)
     func provideMessage(_ title: String?, message: String?)
 }
 
-open class ViperInteractor: ViperInteractorInputProtocol {
+open class ViperInteractor: ViperInteractorInput {
     
     // MARK: - Props
     public var networkWorker: NetworkWorker
     
-    public var _output: ViperInteractorOutputProtocol?
+    public var _output: ViperInteractorOutput?
     
     // MARK: - Initialization
     public init() {
