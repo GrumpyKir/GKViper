@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import GKExtensions
 
-public protocol ViperViewInputProtocol: AnyObject {
+public protocol ViperViewInput: AnyObject {
     func setupInitialState(with viewModel: ViperViewModel)
     func updateViewState(with viewModel: ViperViewModel, animated: Bool)
     
@@ -20,7 +20,7 @@ public protocol ViperViewInputProtocol: AnyObject {
     func show(_ alertController: UIAlertController, animated: Bool)
 }
 
-public extension ViperViewInputProtocol {
+public extension ViperViewInput {
     
     func updateViewState(with viewModel: ViperViewModel, animated: Bool = false) {
         return self.updateViewState(with: viewModel, animated: animated)
@@ -28,7 +28,7 @@ public extension ViperViewInputProtocol {
     
 }
 
-public protocol ViperViewOutputProtocol: AnyObject {
+public protocol ViperViewOutput: AnyObject {
     func viewIsReady(_ controller: UIViewController)
     
     func loadData()
@@ -38,10 +38,10 @@ public protocol ViperViewOutputProtocol: AnyObject {
     func close(animated: Bool)
 }
 
-open class ViperViewController: UIViewController, ViperViewInputProtocol {
+open class ViperViewController: UIViewController, ViperViewInput {
     
     // MARK: - Props
-    public var _output: ViperViewOutputProtocol?
+    public var _output: ViperViewOutput?
     
     // MARK: - Lifecycle
     override open func viewDidLoad() {
@@ -53,7 +53,7 @@ open class ViperViewController: UIViewController, ViperViewInputProtocol {
     override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        setNeedsStatusBarAppearanceUpdate()
+        self.setNeedsStatusBarAppearanceUpdate()
     }
     
     override open var preferredStatusBarStyle: UIStatusBarStyle {
@@ -61,14 +61,7 @@ open class ViperViewController: UIViewController, ViperViewInputProtocol {
     }
     
     // MARK: - ViperViewInputProtocol
-    open func setupInitialState(with viewModel: ViperViewModel) {
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        navigationItem.title = viewModel.navigationTitle
-    }
-    
-    public func updateViewState(with viewModel: ViperViewModel) {
-        self.updateViewState(with: viewModel, animated: false)
-    }
+    open func setupInitialState(with viewModel: ViperViewModel) { }
     
     open func updateViewState(with viewModel: ViperViewModel, animated: Bool) { }
     

@@ -10,8 +10,6 @@ import UIKit
 import GKExtensions
 
 open class ViperViewModel {
-    open var navigationTitle: String = ""
-    open var emptyTitle: String = ""
     
     // MARK: - Initialization
     public init() { }

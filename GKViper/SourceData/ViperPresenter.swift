@@ -9,21 +9,21 @@ import Foundation
 import UIKit
 import GKExtensions
 
-public protocol ViperPresenterInputProtocol: AnyObject {
-    var _view: ViperViewInputProtocol? { get set }
-    var _interactor: ViperInteractorInputProtocol? { get set }
-    var _router: ViperRouterInputProtocol? { get set }
+public protocol ViperPresenterInput: AnyObject {
+    var _view: ViperViewInput? { get set }
+    var _interactor: ViperInteractorInput? { get set }
+    var _router: ViperRouterInput? { get set }
     
     func configure(with data: Any?)
     func updateViewModel(with data: Any)
 }
 
-open class ViperPresenter: ViperPresenterInputProtocol, ViperViewOutputProtocol, ViperInteractorOutputProtocol {
+open class ViperPresenter: ViperPresenterInput, ViperViewOutput, ViperInteractorOutput {
     
     // MARK: - Props
-    public var _view: ViperViewInputProtocol?
-    public var _interactor: ViperInteractorInputProtocol?
-    public var _router: ViperRouterInputProtocol?
+    public var _view: ViperViewInput?
+    public var _interactor: ViperInteractorInput?
+    public var _router: ViperRouterInput?
     
     // MARK: - Initialization
     public init() { }
