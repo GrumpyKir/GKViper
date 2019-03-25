@@ -27,7 +27,7 @@ open class ViperInteractor: ViperInteractorInput {
     // MARK: - Props
     public var networkWorker: NetworkWorker
     
-    public var _output: ViperInteractorOutput?
+    public weak var _output: ViperInteractorOutput?
     
     // MARK: - Initialization
     public init() {
