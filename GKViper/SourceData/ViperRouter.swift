@@ -20,7 +20,7 @@ public protocol ViperRouterInput: AnyObject {
 open class ViperRouter: ViperRouterInput {
     
     // MARK: - Props
-    public var _mainController: UIViewController?
+    public weak var _mainController: UIViewController?
     
     // MARK: - Initialization
     public init() { }
