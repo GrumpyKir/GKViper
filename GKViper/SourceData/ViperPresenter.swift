@@ -21,7 +21,7 @@ public protocol ViperPresenterInput: AnyObject {
 open class ViperPresenter: ViperPresenterInput, ViperViewOutput, ViperInteractorOutput {
     
     // MARK: - Props
-    public var _view: ViperViewInput?
+    public weak var _view: ViperViewInput?
     public var _interactor: ViperInteractorInput?
     public var _router: ViperRouterInput?
     
