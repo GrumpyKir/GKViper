@@ -41,7 +41,7 @@ public protocol ViperViewOutput: AnyObject {
 open class ViperViewController: UIViewController, ViperViewInput {
     
     // MARK: - Props
-    public weak var _output: ViperViewOutput?
+    public var _output: ViperViewOutput?
     
     // MARK: - Lifecycle
     override open func viewDidLoad() {
