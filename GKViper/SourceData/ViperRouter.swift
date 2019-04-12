@@ -5,8 +5,6 @@
 //  Copyright © 2018 AppCraft. All rights reserved.
 //
 
-import Foundation
-import UIKit
 import GKExtensions
 
 public protocol ViperRouterInput: AnyObject {

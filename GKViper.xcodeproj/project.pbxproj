@@ -14,8 +14,6 @@
 		ED29AE572211B76B0035C17A /* ViperPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED29AE522211B76A0035C17A /* ViperPresenter.swift */; };
 		ED29AE582211B76B0035C17A /* ViperViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED29AE532211B76A0035C17A /* ViperViewModel.swift */; };
 		ED29AE592211B76B0035C17A /* ViperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED29AE542211B76A0035C17A /* ViperViewController.swift */; };
-		ED29AE5C2211B77F0035C17A /* OriginTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED29AE5A2211B77F0035C17A /* OriginTableViewCell.swift */; };
-		ED29AE5D2211B77F0035C17A /* OriginCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED29AE5B2211B77F0035C17A /* OriginCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +28,6 @@
 		ED29AE522211B76A0035C17A /* ViperPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperPresenter.swift; sourceTree = "<group>"; };
 		ED29AE532211B76A0035C17A /* ViperViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperViewModel.swift; sourceTree = "<group>"; };
 		ED29AE542211B76A0035C17A /* ViperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperViewController.swift; sourceTree = "<group>"; };
-		ED29AE5A2211B77F0035C17A /* OriginTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OriginTableViewCell.swift; sourceTree = "<group>"; };
-		ED29AE5B2211B77F0035C17A /* OriginCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OriginCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +90,6 @@
 		ED29AE4E2211B7260035C17A /* SourceData */ = {
 			isa = PBXGroup;
 			children = (
-				ED29AE5B2211B77F0035C17A /* OriginCollectionViewCell.swift */,
-				ED29AE5A2211B77F0035C17A /* OriginTableViewCell.swift */,
 				ED29AE512211B76A0035C17A /* ViperInteractor.swift */,
 				ED29AE522211B76A0035C17A /* ViperPresenter.swift */,
 				ED29AE502211B7690035C17A /* ViperRouter.swift */,
@@ -221,8 +215,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED29AE552211B76B0035C17A /* ViperRouter.swift in Sources */,
-				ED29AE5D2211B77F0035C17A /* OriginCollectionViewCell.swift in Sources */,
-				ED29AE5C2211B77F0035C17A /* OriginTableViewCell.swift in Sources */,
 				ED29AE582211B76B0035C17A /* ViperViewModel.swift in Sources */,
 				ED29AE592211B76B0035C17A /* ViperViewController.swift in Sources */,
 				ED29AE562211B76B0035C17A /* ViperInteractor.swift in Sources */,

@@ -5,13 +5,10 @@
 //  Copyright © 2018 AppCraft. All rights reserved.
 //
 
-import Foundation
-import UIKit
 import GKExtensions
 
 public protocol ViperViewInput: AnyObject {
     func setupInitialState(with viewModel: ViperViewModel)
-    func updateViewState(with viewModel: ViperViewModel, animated: Bool)
     
     func beginLoading()
     func finishLoading(with error: Error?)
@@ -62,8 +59,6 @@ open class ViperViewController: UIViewController, ViperViewInput {
     
     // MARK: - ViperViewInputProtocol
     open func setupInitialState(with viewModel: ViperViewModel) { }
-    
-    open func updateViewState(with viewModel: ViperViewModel, animated: Bool) { }
     
     open func beginLoading() {
         DispatchQueue.main.async {
