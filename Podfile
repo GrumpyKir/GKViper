@@ -6,7 +6,6 @@ target 'GKViper' do
   use_frameworks!
 
   # Pods for GKViper
-  pod 'GKExtensions', '~> 1.0.0'
-  pod 'GKNetwork', '~> 0.5.1'
+  pod 'GKExtensions', '~> 1.1.0'
 
 end
