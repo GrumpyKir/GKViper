@@ -17,14 +17,6 @@ public protocol ViperViewInput: AnyObject {
     func show(_ alertController: UIAlertController, animated: Bool)
 }
 
-public extension ViperViewInput {
-    
-    func updateViewState(with viewModel: ViperViewModel, animated: Bool = false) {
-        return self.updateViewState(with: viewModel, animated: animated)
-    }
-    
-}
-
 public protocol ViperViewOutput: AnyObject {
     func viewIsReady(_ controller: UIViewController)
     
