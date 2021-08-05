@@ -8,9 +8,7 @@
 import GKExtensions
 
 public protocol ViperInteractorInput: AnyObject {
-    associatedtype InteractorOutput = ViperInteractorOutput
-    
-    var output: InteractorOutput? { get set }
+    var _output: ViperInteractorOutput? { get set }
 }
 
 public protocol ViperInteractorOutput: AnyObject {
@@ -20,10 +18,10 @@ public protocol ViperInteractorOutput: AnyObject {
     func provideMessage(_ title: String?, message: String?)
 }
 
-open class ViperInteractor<InteractorOutput: ViperInteractorOutput>: ViperInteractorInput {
+open class ViperInteractor: ViperInteractorInput {
     
     // MARK: - Props
-    public weak var output: InteractorOutput?
+    public weak var _output: ViperInteractorOutput?
     
     // MARK: - Initialization
     public init() { }
