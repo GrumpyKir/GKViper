@@ -52,17 +52,9 @@ open class ViperViewController: UIViewController, ViperViewInput {
     // MARK: - ViperViewInputProtocol
     open func setupInitialState(with viewModel: ViperViewModel) { }
     
-    open func beginLoading() {
-        DispatchQueue.main.async {
-            UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        }
-    }
+    open func beginLoading() { }
     
     open func finishLoading(with error: Error?) {
-        DispatchQueue.main.async {
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
-        }
-        
         if let error = error {
             self.show(title: "Error".localized,
                       message: error.localizedDescription,
