@@ -8,17 +8,21 @@
 import GKExtensions
 
 public protocol ViperPresenterInput: AnyObject {
-    var _view: ViperViewInput? { get set }
-    var _interactor: ViperInteractorInput? { get set }
-    var _router: ViperRouterInput? { get set }
+    associatedtype ViewInput = ViperViewInput
+    associatedtype InteractorInput = ViperInteractorInput
+    associatedtype RouterInput = ViperRouterInput
+    
+    var view: ViewInput? { get set }
+    var interactor: InteractorInput? { get set }
+    var router: RouterInput? { get set }
 }
 
-open class ViperPresenter: ViperPresenterInput, ViperViewOutput, ViperInteractorOutput {
+open class ViperPresenter<ViewInput: ViperViewInput, InteractorInput: ViperInteractorInput, RouterInput: ViperRouterInput>: ViperPresenterInput, ViperViewOutput, ViperInteractorOutput {
     
     // MARK: - Props
-    public weak var _view: ViperViewInput?
-    public var _interactor: ViperInteractorInput?
-    public var _router: ViperRouterInput?
+    public weak var view: ViewInput?
+    public var interactor: InteractorInput?
+    public var router: RouterInput?
     
     // MARK: - Initialization
     public init() { }
@@ -33,24 +37,24 @@ open class ViperPresenter: ViperPresenterInput, ViperViewOutput, ViperInteractor
     open func reloadData() { }
         
     open func goBack(animated: Bool) {
-        self._router?.goBack(animated: animated)
+        self.router?.goBack(animated: animated)
     }
     
     open func close(animated: Bool) {
-        self._router?.dismiss(animated: animated)
+        self.router?.dismiss(animated: animated)
     }
     
     // MARK: - ViperInteractorOutputProtocol
     open func beginLoading() {
-        self._view?.beginLoading()
+        self.view?.beginLoading()
     }
     
     open func finishLoading(with error: Error?) {
-        self._view?.finishLoading(with: error)
+        self.view?.finishLoading(with: error)
     }
     
     open func provideMessage(_ title: String?, message: String?) {
-        self._view?.show(title: title, message: message, animated: true)
+        self.view?.show(title: title, message: message, animated: true)
     }
     
 }

@@ -27,16 +27,16 @@ public protocol ViperViewOutput: AnyObject {
     func close(animated: Bool)
 }
 
-open class ViperViewController: UIViewController, ViperViewInput {
+open class ViperViewController<ViewOutput: ViperViewOutput>: UIViewController, ViperViewInput {
     
     // MARK: - Props
-    public var _output: ViperViewOutput?
+    public var output: ViewOutput?
     
     // MARK: - Lifecycle
     override open func viewDidLoad() {
         super.viewDidLoad()
         
-        self._output?.viewIsReady(self)
+        self.output?.viewIsReady(self)
     }
     
     override open func viewWillAppear(_ animated: Bool) {
@@ -52,17 +52,9 @@ open class ViperViewController: UIViewController, ViperViewInput {
     // MARK: - ViperViewInputProtocol
     open func setupInitialState(with viewModel: ViperViewModel) { }
     
-    open func beginLoading() {
-        DispatchQueue.main.async {
-            UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        }
-    }
+    open func beginLoading() { }
     
     open func finishLoading(with error: Error?) {
-        DispatchQueue.main.async {
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
-        }
-        
         if let error = error {
             self.show(title: "Error".localized,
                       message: error.localizedDescription,
