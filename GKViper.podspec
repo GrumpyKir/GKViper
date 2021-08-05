@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
 	spec.ios.deployment_target	= "10.0"
 
 	spec.name 			= "GKViper"
-	spec.version 		= "1.2.0"
+	spec.version 		= "1.2.1"
 	spec.license 		= { :type => "MIT", :file => "LICENSE" }
 	spec.homepage 		= "https://github.com/GrumpyKir/GKViper"
 	spec.author 		= { "Opekishev Kirill" => "grumpykir@gmail.com" }

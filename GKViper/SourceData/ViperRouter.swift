@@ -8,19 +8,17 @@
 import GKExtensions
 
 public protocol ViperRouterInput: AnyObject {
-    associatedtype ViewController = UIViewController
-    
-    var viewController: ViewController? { get set }
+    var _mainController: UIViewController? { get set }
     
     func dismiss(animated: Bool)
     func goBack(animated: Bool)
     func goToRoot(animated: Bool)
 }
 
-open class ViperRouter<ViewController: UIViewController>: ViperRouterInput {
+open class ViperRouter: ViperRouterInput {
     
     // MARK: - Props
-    public weak var viewController: ViewController?
+    public weak var _mainController: UIViewController?
     
     // MARK: - Initialization
     public init() { }
@@ -28,32 +26,32 @@ open class ViperRouter<ViewController: UIViewController>: ViperRouterInput {
     // MARK: - ViperRouterInputProtocol
     open func dismiss(animated: Bool) {
         DispatchQueue.main.async { [weak self] in
-            self?.viewController?.dismiss(animated: animated, completion: nil)
+            self?._mainController?.dismiss(animated: animated, completion: nil)
         }
     }
     
     open func goBack(animated: Bool) {
         DispatchQueue.main.async { [weak self] in
-            self?.viewController?.navigationController?.popViewController(animated: animated)
+            self?._mainController?.navigationController?.popViewController(animated: animated)
         }
     }
     
     open func goToRoot(animated: Bool) {
         DispatchQueue.main.async { [weak self] in
-            self?.viewController?.navigationController?.popToRootViewController(animated: animated)
+            self?._mainController?.navigationController?.popToRootViewController(animated: animated)
         }
     }
     
     // MARK: - Module functions
     open func present(_ viewController: UIViewController, animated: Bool) {
         DispatchQueue.main.async { [weak self] in
-            self?.viewController?.present(viewController, animated: animated, completion: nil)
+            self?._mainController?.present(viewController, animated: animated, completion: nil)
         }
     }
     
     open func push(_ viewController: UIViewController, animated: Bool) {
         DispatchQueue.main.async { [weak self] in
-            self?.viewController?.navigationController?.pushViewController(viewController, animated: animated)
+            self?._mainController?.navigationController?.pushViewController(viewController, animated: animated)
         }
     }
         
